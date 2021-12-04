@@ -44,7 +44,7 @@ mod tests {
 
         let depths = lines.iter()
             .filter(|str| str.len() > 0)
-            .map(|str: &&str| str.parse::<i32>().unwrap())
+            .map(|str| str.parse::<i32>().unwrap())
             .collect();
         depths
     }
