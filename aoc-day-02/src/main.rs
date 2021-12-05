@@ -61,7 +61,6 @@ mod tests {
         ];
 
         let (horizontal, vertical) = final_position_part1(&steps);
-        print!("Values: {}, {}", horizontal, vertical);
         assert_eq!(horizontal * vertical, 150);
     }
 
@@ -88,11 +87,11 @@ mod tests {
         assert_eq!(horizontal * vertical, 900);
     }
 
-    #[test]  // Part 1 - with data
+    #[test]  // Part 2 - with data
     fn test_part2() {
         let steps: Vec<String> = util::read_lines("./src/data.txt");
 
         let (horizontal, vertical) = final_position_part2(&steps);
-        assert_eq!(horizontal * vertical, 1893605);
+        assert_eq!(horizontal * vertical, 2120734350);
     }
 }
