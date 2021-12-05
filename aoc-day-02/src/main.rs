@@ -72,7 +72,7 @@ mod tests {
         assert_eq!(horizontal * vertical, 1893605);
     }
 
-    #[test]  // Part 1
+    #[test]  // Part 2
     fn test_basic_part2() {
         let steps = vec![
             "forward 5".to_string(),
