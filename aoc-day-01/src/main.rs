@@ -18,8 +18,6 @@ fn depth_increases_sliding(measurements: &Vec<i32>) -> usize {
 
 #[cfg(test)]
 mod tests {
-    use std::fs;
-
     use crate::{depth_increases, depth_increases_sliding};
 
     #[test]  // Part 1
@@ -37,15 +35,10 @@ mod tests {
     }
 
     fn read_depth_data() -> Vec<i32> {
-        let contents = fs::read_to_string("./src/data.txt").unwrap();
-        let lines: Vec<&str> = contents
-            .split("\n")
-            .collect();
+        let lines: Vec<String> = util::read_lines("./src/data.txt");
 
-        let depths = lines.iter()
-            .filter(|str| str.len() > 0)
-            .map(|str| str.parse::<i32>().unwrap())
-            .collect();
-        depths
+        lines.iter()
+            .filter_map(|str| str.parse::<i32>().ok())
+            .collect()
     }
 }
