@@ -6,5 +6,6 @@ members = [
     "aoc-day-03",
     "aoc-day-06",
     "aoc-day-07",
+    "aoc-day-08",
 ]
 
