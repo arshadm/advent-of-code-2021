@@ -6,7 +6,10 @@ use std::fs;
 pub fn read_lines(path: &str) -> Vec<String> {
     let contents = fs::read_to_string(path).unwrap();
 
-    contents.lines().map(str::to_string).collect()
+    contents.lines()
+        .map(str::to_string)
+        .filter(|str| !str.is_empty())
+        .collect()
 }
 
 ///
